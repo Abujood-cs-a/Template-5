@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
+}
+
+body {
+    background-image: linear-gradient(#01012e, #240019);
+    height: 100vh;
+    width: 100%;
+}
+
+.container {
+    background-image: url("images/stars1.png");
+    height: 95vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: zoomInDown 1s ease;
+    -webkit-animation: zoomInDown 1s ease;
+    animation-delay: 1s;
+}
+
+.container ul {
+    list-style: none;
+    text-align: center;
+}
+
+.container ul:hover li a {
+    opacity: 0;
+}
+
+.container ul li {
+    margin: 15px 0;
+}
+
+.container ul li a {
+    background-color: darkblue;
+    color: white;
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 20px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    z-index: 10;
+}
+
+.container ul li a:hover {
+    background-color: darkmagenta;
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    opacity: 1;
+}
+
+.container ul li::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    color: white;
+    font-size: 80px;
+    letter-spacing: 50px;
+    opacity: 0;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    pointer-events: none;
+}
+
+@media (max-width: 767px) {
+    .container ul li::before {
+        font-size: 35px;
+    }
+}
+
+.container ul li:hover::before {
+    opacity: 0.5;
+    letter-spacing: 5px;
+}
+
+.container ul li::after {
+    content: "";
+    width: 180px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow: 0 0 80px orangered;
+    opacity: 0;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.container ul li:hover::after {
+    opacity: 0.5;
+    width: 100px;
+}
+
+.container ul li:first-child {
+    animation: flipInX 1s ease;
+    -webkit-animation: flipInX 1s ease;
+    animation-delay: 2s;
+}
+
+.container ul li:nth-child(2) {
+    animation: flipInY 1s ease;
+    -webkit-animation: flipInY 1s ease;
+    animation-delay: 3s;
+}
+
+.container ul li:nth-child(3) {
+    animation: slideInDown 1s ease;
+    -webkit-animation: slideInDown 1s ease;
+    animation-delay: 4s;
+}
+
+.container ul li:nth-child(4) {
+    animation: flipOutX 1s ease;
+    -webkit-animation: flipOutX 1s ease;
+    animation-delay: 5s;
+}
+
+.container ul li:nth-child(5) {
+    animation: flipOutY 1s ease;
+    -webkit-animation: flipOutY 1s ease;
+    animation-delay: 6s;
+}
+
+.container ul li:nth-child(6) {
+    animation: fadeInUp 1s ease;
+    -webkit-animation: fadeInUp 1s ease;
+    animation-delay: 7s;
+}
+
+.container ul li:nth-child(7) {
+    animation: rollIn 1s ease;
+    -webkit-animation: rollIn 1s ease;
+    animation-delay: 8s;
+}
+
+.container ul li:nth-child(8) {
+    animation: rollIn 1s ease;
+    -webkit-animation: rollIn 1s ease;
+    animation-delay: 9s;
+}
